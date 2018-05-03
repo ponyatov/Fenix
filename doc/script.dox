@@ -1,10 +1,42 @@
 /**
 @page script concatenative FORTH-like control language
 
-@section modules Using Python modules from script
+@section syntax Syntax
 
-`use: module ( -- )`
+`WORD ( -- sym:wordname )` get next wordname from source code stream
 
-import module, wrap it in Fenix.pyModule object and put in context object vocabulary
+@subsection tuneply Tuning syntax parser
+
+@ref ply implemented using well-known
+<a href="http://www.dabeaz.com/ply/">PLY library</a> can be used in Python
+to process a fairly complex syntax.
+
+As you can see, default parser uses the only lexer due to the extra simple
+FORTH-like language syntax:
+- a block of any symbols distinct from spaces forms single <b>word</b> name
+
+You can spend a lot of time until become friendly with it,
+but it has some important features:
+- simple parsing down to a few machine commands
+(PLY is overkill but was selected to let you extend syntax as you want)
+
+@section debug Debugging
+
+`? ( -- )` dump data stack
+
+`?? ( -- )` dump FVM state and stop system
+
+`WORDS ( -- )` dump vocabulary
+
+@section extending Extending and interfacing
+
+@subsection modules Using Python modules from script
+
+`use: module ( -- )` import module, wrap it in Fenix.pyModule object
+and put in context object vocabulary
+
+@subsection ui User interface
+
+@see @ref guidoc
 
 */

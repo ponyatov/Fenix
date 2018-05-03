@@ -76,7 +76,7 @@ class Voc(Container):
 
 ## @}
 
-## @defgroup syntax PLY-based Syntax parser /lexer only/
+## @defgroup ply PLY-based Syntax parser /lexer only/
 ## @{
 
 import ply.lex  as lex
@@ -120,10 +120,11 @@ class FVM(Sym):
         def defer(method): self.attr[method.__name__] = Method(method)
         defer(self.INTERPRET)
         defer(self.WORD)
+        defer(self.FIND)
+        defer(self.EXECUTE)
         self['USE:'] = Method(self.USE)
-#         self.W << self.WORD
-#         self.W << self.FIND
-#         self.W << self.EXECUTE
+        self['??'] = Method(self.DumpState)
+        defer(self.GUI)
         ## start interpreter
         self.INTERPRET(SRC)
 
@@ -159,10 +160,36 @@ class FVM(Sym):
         self.WORD() ; ModuleName = self.pop().val   # look forward module name
         mod = pyModule(__import__(ModuleName))      # import via function call
         self[mod.val] = mod                         # push in vocabulary
+        
+    ## `?? ( -- )`
+    def DumpState(self): print self
+
+    ## start GUI system        
+    def GUI(self): GUI.start() ; GUI.join()
 
 ## @}
 
 ## @defgroup gui GUI: wxPython
+## @{
+
+import wx,threading
+## GUI thread
+class GUI_thread(threading.Thread):
+    ## initialize before GUI starts
+    def __init__(self):
+        threading.Thread.__init__(self)
+        ## wx application
+        self.app = wx.App()
+        ## single empty frame will be used as parent for dynamic workbench
+        self.frame = wx.Frame(None,wx.ID_ANY,str(sys.argv))
+    ## start GUI thread
+    def run(self):
+        self.frame.Show()
+        self.app.MainLoop()
+## singleton GUI thread
+GUI = GUI_thread()
+
+## @}
 
 ## @defgroup meta META: metaprogramming
 ## @{

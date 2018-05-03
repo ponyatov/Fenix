@@ -81,14 +81,35 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">concatenative FORTH-like control language </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><h1><a class="anchor" id="modules"></a>
-Using Python modules from script</h1>
-<p><code>use: module ( -- )</code></p>
-<p>import module, wrap it in <a class="el" href="classFenix_1_1pyModule.html" title="wrapped Python module ">Fenix.pyModule</a> object and put in context object vocabulary </p>
+<div class="textblock"><h1><a class="anchor" id="syntax"></a>
+Syntax</h1>
+<p><code>WORD ( -- sym:wordname )</code> get next wordname from source code stream</p>
+<h2><a class="anchor" id="tuneply"></a>
+Tuning syntax parser</h2>
+<p><a class="el" href="group__ply.html">PLY-based Syntax parser /lexer only/</a> implemented using well-known <a href="http://www.dabeaz.com/ply/">PLY library</a> can be used in Python to process a fairly complex syntax.</p>
+<p>As you can see, default parser uses the only lexer due to the extra simple FORTH-like language syntax:</p><ul>
+<li>a block of any symbols distinct from spaces forms single <b>word</b> name</li>
+</ul>
+<p>You can spend a lot of time until become friendly with it, but it has some important features:</p><ul>
+<li>simple parsing down to a few machine commands (PLY is overkill but was selected to let you extend syntax as you want)</li>
+</ul>
+<h1><a class="anchor" id="debug"></a>
+Debugging</h1>
+<p><code>? ( -- )</code> dump data stack</p>
+<p><code>?? ( -- )</code> dump FVM state and stop system</p>
+<p><code>WORDS ( -- )</code> dump vocabulary</p>
+<h1><a class="anchor" id="extending"></a>
+Extending and interfacing</h1>
+<h2><a class="anchor" id="modules"></a>
+Using Python modules from script</h2>
+<p><code>use: module ( -- )</code> import module, wrap it in <a class="el" href="classFenix_1_1pyModule.html" title="wrapped Python module ">Fenix.pyModule</a> object and put in context object vocabulary</p>
+<h2><a class="anchor" id="ui"></a>
+User interface</h2>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="guidoc.html">GUI programming</a> </dd></dl>
 </div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu May 3 2018 23:04:53 for Fenix by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri May 4 2018 00:02:02 for Fenix by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

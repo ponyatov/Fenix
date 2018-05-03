@@ -1,0 +1,13 @@
+/**
+
+@page guidoc GUI programming
+
+You can use generic `use: wx` to get any imported module,
+but GUI engine in Felix has some complex code,
+so it was selected to use special GUI elements class subtree
+implemented in Python.
+
+Felix follows KISS principle, so make GUI in Python is much simpler than
+making some translation layer toward wxPython module.
+
+*/
