@@ -4,6 +4,7 @@
 <area shape="rect" id="node6" href="$classFenix_1_1Meta.html" title="metaprogramming object " alt="" coords="299,80,385,107"/>
 <area shape="rect" id="node3" href="$classFenix_1_1Stack.html" title="LIFO stack. " alt="" coords="5,155,97,181"/>
 <area shape="rect" id="node4" href="$classFenix_1_1Voc.html" title="Vocabulary /associative array, unordered/. " alt="" coords="121,155,203,181"/>
-<area shape="rect" id="node7" href="$classFenix_1_1Method.html" title="object method " alt="" coords="259,155,361,181"/>
-<area shape="rect" id="node8" href="$classFenix_1_1Module.html" title="software module " alt="" coords="385,155,485,181"/>
+<area shape="rect" id="node7" href="$classFenix_1_1Method.html" title="object method " alt="" coords="231,155,333,181"/>
+<area shape="rect" id="node8" href="$classFenix_1_1Module.html" title="software module (= PYTHON MODULE) " alt="" coords="357,155,457,181"/>
+<area shape="rect" id="node9" href="$classFenix_1_1pyModule.html" title="wrapped Python module " alt="" coords="350,229,465,256"/>
 </map>
