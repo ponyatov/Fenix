@@ -12,7 +12,8 @@ var indexSectionsWithContent =
   2: "f",
   3: "_defhiptuw",
   4: "aflmntv",
-  5: "fglmps"
+  5: "fglmps",
+  6: "c"
 };
 
 var indexSectionNames =
@@ -22,7 +23,8 @@ var indexSectionNames =
   2: "files",
   3: "functions",
   4: "variables",
-  5: "groups"
+  5: "groups",
+  6: "pages"
 };
 
 function convertToId(search)

@@ -1,0 +1,10 @@
+/**
+@page script concatenative FORTH-like control language
+
+@section modules Using Python modules from script
+
+`use: module ( -- )`
+
+import module, wrap it in Fenix.pyModule object and put in context object vocabulary
+
+*/

@@ -5,7 +5,7 @@
 
 github: https://github.com/ponyatov/Fenix
 
-- concatenative FORTH-like control language
+- @ref script
 - pure object-based virtual machine
-- high-level prototyping
-- minimized design
+- high-level prototyping and metaprogramming
+- minimized design comparing to <a href="https://github.com/ponyatov/o/releases/latest">oFORTH</a>

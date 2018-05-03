@@ -157,8 +157,8 @@ class FVM(Sym):
     ## import Python module
     def USE(self):
         self.WORD() ; ModuleName = self.pop().val   # look forward module name
-        mod = __import__(ModuleName)                # import via function call
-        self.push(pyModule(mod))                    # warp on stack
+        mod = pyModule(__import__(ModuleName))      # import via function call
+        self[mod.val] = mod                         # push in vocabulary
 
 ## @}
 
