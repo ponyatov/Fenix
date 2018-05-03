@@ -1,5 +1,10 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$classFenix_1_1Sym.html" title="base symbolic class " alt="" coords="5,5,91,32"/>
-<area shape="rect" id="node2" href="$classFenix_1_1Meta.html" title="metaprogramming object " alt="" coords="139,5,225,32"/>
-<area shape="rect" id="node3" href="$classFenix_1_1Module.html" title="software module " alt="" coords="273,5,373,32"/>
+<area shape="rect" id="node1" href="$classFenix_1_1Sym.html" title="base symbolic class " alt="" coords="5,93,91,120"/>
+<area shape="rect" id="node2" href="$classFenix_1_1Container.html" title="data container " alt="" coords="139,43,253,69"/>
+<area shape="rect" id="node5" href="$classFenix_1_1FVM.html" title="Fenix Virtual Machine. " alt="" coords="153,93,239,120"/>
+<area shape="rect" id="node6" href="$classFenix_1_1Meta.html" title="metaprogramming object " alt="" coords="153,144,239,171"/>
+<area shape="rect" id="node3" href="$classFenix_1_1Stack.html" title="LIFO stack. " alt="" coords="306,5,398,32"/>
+<area shape="rect" id="node4" href="$classFenix_1_1Voc.html" title="Vocabulary /associative array, unordered/. " alt="" coords="311,56,393,83"/>
+<area shape="rect" id="node7" href="$classFenix_1_1Method.html" title="object method " alt="" coords="301,119,403,145"/>
+<area shape="rect" id="node8" href="$classFenix_1_1Module.html" title="software module " alt="" coords="302,169,402,196"/>
 </map>

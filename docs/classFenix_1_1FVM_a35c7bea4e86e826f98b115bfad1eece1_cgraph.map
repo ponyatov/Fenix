@@ -1,0 +1,5 @@
+<map id="Fenix.FVM.__init__" name="Fenix.FVM.__init__">
+<area shape="rect" id="node2" href="$classFenix_1_1FVM.html#aa2753e2d72738e705691585f9af9e818" title="interpreter " alt="" coords="188,5,355,32"/>
+<area shape="rect" id="node3" href="$classFenix_1_1FVM.html#a55c87aab1c09639436a085c5278e75db" title="fetch next word from source code stream " alt="" coords="205,56,338,83"/>
+<area shape="rect" id="node4" href="$classFenix_1_1Sym.html#af2373e3659cadda4698647b671bdbfab" title="push to nest[] stack&#45;like " alt="" coords="403,56,520,83"/>
+</map>
