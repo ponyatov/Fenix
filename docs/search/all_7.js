@@ -1,4 +1,6 @@
 var searchData=
 [
-  ['head',['head',['../classFenix_1_1Sym.html#a07a465d10108051d3d753f5c8300277f',1,'Fenix::Sym']]]
+  ['gui',['GUI',['../classFenix_1_1GUI.html',1,'Fenix.GUI'],['../group__gui.html#gac0eddfda19db983b168fc73874dcd682',1,'Fenix.FVM.GUI()'],['../group__gui.html',1,'(Global Namespace)']]],
+  ['gui_5fthread',['GUI_thread',['../classFenix_1_1GUI__thread.html',1,'Fenix']]],
+  ['gui_20programming',['GUI programming',['../guidoc.html',1,'']]]
 ];

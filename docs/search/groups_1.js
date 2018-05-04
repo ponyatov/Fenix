@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['gui_3a_20wxpython',['GUI: wxPython',['../group__gui.html',1,'']]]
+  ['fvm_3a_20fenix_20virtual_20machine',['FVM: Fenix Virtual Machine',['../group__fvm.html',1,'']]]
 ];

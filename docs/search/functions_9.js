@@ -1,7 +1,6 @@
 var searchData=
 [
-  ['t_5ferror',['t_error',['../group__ply.html#gac503f6caedf6e08bbb2e2473a606af06',1,'Fenix']]],
-  ['t_5fnewline',['t_newline',['../group__ply.html#ga3138754bc6aae37ff002344b6542c86c',1,'Fenix']]],
-  ['t_5fsym',['t_SYM',['../group__ply.html#gaa1b942a5fbcfd072123a6bf46ed6da71',1,'Fenix']]],
-  ['top',['top',['../classFenix_1_1Sym.html#ab51e6a5c9f3df9751a93882c85027b29',1,'Fenix::Sym']]]
+  ['pad',['pad',['../classFenix_1_1Sym.html#a02c3f026683cf6f37c2fd336d7a723b3',1,'Fenix::Sym']]],
+  ['pop',['pop',['../classFenix_1_1Sym.html#a34a1f3a194a31b34294dbea0b9fd955b',1,'Fenix::Sym']]],
+  ['push',['push',['../classFenix_1_1Sym.html#afc42e2a537f657cc2ef04297d35a1dad',1,'Fenix::Sym']]]
 ];

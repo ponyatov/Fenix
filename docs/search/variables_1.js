@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['fn',['fn',['../classFenix_1_1Method.html#a40453a7905ce749d3bf65633e86ed9ca',1,'Fenix::Method']]],
-  ['frame',['frame',['../classFenix_1_1GUI__thread.html#a5cccad6df2ddc2636eee1ac9a08fe0a5',1,'Fenix::GUI_thread']]]
+  ['dumpdone',['dumpdone',['../classFenix_1_1Sym.html#ac03854c1e0509f55843ca0e156e445fb',1,'Fenix.Sym.dumpdone()'],['../classFenix_1_1Sym.html#a952aa71a2658bd85dda1684870e98653',1,'Fenix.Sym.dumpdone()']]]
 ];

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['sym_3a_20symbolic_20object_20system',['SYM: Symbolic object system',['../group__sym.html',1,'']]]
+  ['meta_3a_20metaprogramming',['META: metaprogramming',['../group__meta.html',1,'']]]
 ];

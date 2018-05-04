@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['ply_2dbased_20syntax_20parser_20_2flexer_20only_2f',['PLY-based Syntax parser /lexer only/',['../group__ply.html',1,'']]]
+  ['llvm_3a_20managed_20compilation',['LLVM: managed compilation',['../group__llvm.html',1,'']]]
 ];

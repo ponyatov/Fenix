@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['container',['Container',['../classFenix_1_1Container.html',1,'Fenix']]],
-  ['concatenative_20forth_2dlike_20control_20language',['concatenative FORTH-like control language',['../script.html',1,'']]]
+  ['bye',['BYE',['../classFenix_1_1FVM.html#a408bff5f75ef0a4b34c997f23ed634d1',1,'Fenix::FVM']]]
 ];

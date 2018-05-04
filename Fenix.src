@@ -1,6 +1,8 @@
 # test & system bootstrap script
 
-use: wx 
+\ use: wx
+
+argv WINDOW var wnMain
 
 GUI 
 

@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['gui',['GUI',['../group__gui.html#ga6e056303e683df3770cd5d7f613dad00',1,'Fenix']]]
+  ['fn',['fn',['../classFenix_1_1Method.html#a40453a7905ce749d3bf65633e86ed9ca',1,'Fenix::Method']]],
+  ['frame',['frame',['../classFenix_1_1Window.html#a4d5eba4b70e6ce020ec865a87bfd9743',1,'Fenix::Window']]]
 ];

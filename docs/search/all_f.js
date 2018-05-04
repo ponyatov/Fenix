@@ -1,11 +1,7 @@
 var searchData=
 [
-  ['t_5ferror',['t_error',['../group__ply.html#gac503f6caedf6e08bbb2e2473a606af06',1,'Fenix']]],
-  ['t_5fignore',['t_ignore',['../group__ply.html#ga13bd2b222f3f35429e6ea6121d20141a',1,'Fenix']]],
-  ['t_5fignore_5fcomment',['t_ignore_COMMENT',['../group__ply.html#gad19f693c4611da0bdbfe0381daf4fce2',1,'Fenix']]],
-  ['t_5fnewline',['t_newline',['../group__ply.html#ga3138754bc6aae37ff002344b6542c86c',1,'Fenix']]],
-  ['t_5fsym',['t_SYM',['../group__ply.html#gaa1b942a5fbcfd072123a6bf46ed6da71',1,'Fenix']]],
-  ['tag',['tag',['../classFenix_1_1Sym.html#aa432df522a2561ed429fb3e89a57bdbc',1,'Fenix::Sym']]],
-  ['tokens',['tokens',['../group__ply.html#ga9000fd1e740d9f69be44e251aa2981b4',1,'Fenix']]],
-  ['top',['top',['../classFenix_1_1Sym.html#ab51e6a5c9f3df9751a93882c85027b29',1,'Fenix::Sym']]]
+  ['src',['SRC',['../Fenix_8py.html#a39e939cac709ba124dc7be7c36004372',1,'Fenix']]],
+  ['stack',['Stack',['../classFenix_1_1Stack.html',1,'Fenix']]],
+  ['str',['Str',['../classFenix_1_1Str.html',1,'Fenix']]],
+  ['sym',['Sym',['../classFenix_1_1Sym.html',1,'Fenix.Sym'],['../group__sym.html',1,'(Global Namespace)']]]
 ];

@@ -25,15 +25,24 @@ class Sym:
     ## print object
     def __repr__(self): return self.dump()
 
+    ## list holds list od dumped objects: prevent infty recursion
+    dumpdone=[]
+    
     ## dump object in tree-like form
     ## @returns string tree dump
-    ## @param[in] depth padding for recursive tree walk    
-    def dump(self,depth=0):
-        S = '\n'+self.pad(depth)+self.head()
-        for i in self.attr:
-            S += '\n'+self.pad(depth+1)+self.attr[i].head('%s = '%i)
-        for j in self.nest:
-            S += j.dump(depth+1)
+    ## @param[in] depth padding for recursive tree walk   
+    ## @param[in] prefix will be used before `<T:V>` 
+    def dump(self,depth=0,prefix=''):
+        ## prevent infty recursion
+        if not depth: self.dumpdone=[]
+        S = '\n' + self.pad(depth)+self.head(prefix)
+        if self not in self.dumpdone:
+            self.dumpdone.append(self)
+            for i in self.attr:
+                S += self.attr[i].dump(depth+1,prefix='%s = '%i)
+            for j in self.nest:
+                S += j.dump(depth+1)
+        else: S += '...'
         return S
     
     ## left pad every tree dump element
@@ -122,11 +131,19 @@ class FVM(Sym):
         defer(self.WORD)
         defer(self.FIND)
         defer(self.EXECUTE)
+        defer(self.VAR)
         self['USE:'] = Method(self.USE)
+        self['?']  = Method(self.DumpStack)
         self['??'] = Method(self.DumpState)
         defer(self.GUI)
+        defer(self.WINDOW)
+        defer(self.ARGV)
         ## start interpreter
         self.INTERPRET(SRC)
+        
+    ## @defgroup interpret Interpreter/Compiler
+    ## @ingroup fvm
+    ## @{
 
     ## interpreter        
     def INTERPRET(self,SRC=''):
@@ -154,6 +171,13 @@ class FVM(Sym):
         
     ## execute topmost object it it callable
     def EXECUTE(self): self.pop()()
+    
+    ## allocate variable
+    def VAR(self):
+        self.WORD() ; WN = self.pop().val   # var name forward lookup
+        self[WN] = self.pop()               # fetch init value
+    
+    ## @}
         
     ## import Python module
     def USE(self):
@@ -161,16 +185,54 @@ class FVM(Sym):
         mod = pyModule(__import__(ModuleName))      # import via function call
         self[mod.val] = mod                         # push in vocabulary
         
+    ## @defgroup debug Debug
+    ## @ingroup fvm
+    ## @{
+            
+    ## `? ( -- )` dump data stack
+    def DumpStack(self): print self.nest
     ## `?? ( -- )`
-    def DumpState(self): print self
-
-    ## start GUI system        
-    def GUI(self): GUI.start() ; GUI.join()
+    def DumpState(self): print self ; self.BYE()
+    
+    ## @}
+    
+    ## `BYE ( -- )` stop system
+    def BYE(self): sys.exit(0)
+    
+    ## `GUI ( -- )` wait until GUI_thread terminates
+    ## @ingroup gui
+    def GUI(self): thread_GUI.start() ; thread_GUI.join()
+    
+    ## `WINDOW ( name -- window:name )` create window
+    ## @ingroup gui
+    def WINDOW(self):
+        self.push(Window(self.pop().val))
+        
+    ## `ARGV ( -- vectors:args )` get arguments given on command line
+    def ARGV(self):
+        self.push(Str(sys.argv))
 
 ## @}
 
+## string
+class Str(Sym): pass
+
 ## @defgroup gui GUI: wxPython
 ## @{
+
+## GUI element
+class GUI(Sym):
+    ## process message from caller stack
+    def __call__(self): self.push(self)
+
+## window
+class Window(GUI):
+    ## wrap wxFrame
+    def __init__(self,V):
+        GUI.__init__(self,V)
+        ## wxFrame wrapped
+        self.frame = wx.Frame(None,wx.ID_ANY,str(self.val))
+        self.frame.Show()
 
 import wx,threading
 ## GUI thread
@@ -180,14 +242,11 @@ class GUI_thread(threading.Thread):
         threading.Thread.__init__(self)
         ## wx application
         self.app = wx.App()
-        ## single empty frame will be used as parent for dynamic workbench
-        self.frame = wx.Frame(None,wx.ID_ANY,str(sys.argv))
     ## start GUI thread
     def run(self):
-        self.frame.Show()
         self.app.MainLoop()
 ## singleton GUI thread
-GUI = GUI_thread()
+thread_GUI = GUI_thread()
 
 ## @}
 
@@ -226,6 +285,7 @@ class Method(Meta):
 ## @defgroup llvm LLVM: managed compilation
 
 if __name__ == '__main__':
+    ## source code from command line parameter
     try: SRC = sys.argv[1]
     except IndexError: SRC = 'Fenix.src'
     print FVM(SRC,open(SRC).read())

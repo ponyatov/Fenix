@@ -1,0 +1,16 @@
+<map id="Fenix.FVM.__init__" name="Fenix.FVM.__init__">
+<area shape="rect" id="node2" href="$group__interpret.html#gad3f1c8af2c0d8e06dc5a8f49c2b5b9d8" title="interpreter " alt="" coords="188,5,355,32"/>
+<area shape="rect" id="node3" href="$group__interpret.html#ga58544fc5301facc653894a3da1ea3a7f" title="fetch next word from source code stream " alt="" coords="403,284,536,311"/>
+<area shape="rect" id="node5" href="$group__interpret.html#ga358c0f970dd02769ce806483567b07d7" title="lookup executable definition in vocabulary " alt="" coords="210,107,333,133"/>
+<area shape="rect" id="node7" href="$group__interpret.html#ga946f2767aa3a726bae5c77c554b5137e" title="execute topmost object it it callable " alt="" coords="194,208,349,235"/>
+<area shape="rect" id="node8" href="$group__interpret.html#ga39e7d4f909bb0e2c57bba684dc5cb309" title="allocate variable " alt="" coords="212,259,331,285"/>
+<area shape="rect" id="node9" href="$classFenix_1_1FVM.html#a8b279c335b5804d0ba9b70d0e06c6356" title="import Python module " alt="" coords="212,309,331,336"/>
+<area shape="rect" id="node10" href="$group__debug.html#gab4694f3bfe5962259122d7cc738c46c6" title="? ( &#45;&#45; ) dump data stack " alt="" coords="192,411,351,437"/>
+<area shape="rect" id="node11" href="$group__debug.html#gacfc0008055badc412e30f16ad26bec22" title="?? ( &#45;&#45; ) " alt="" coords="193,461,349,488"/>
+<area shape="rect" id="node13" href="$group__gui.html#gac0eddfda19db983b168fc73874dcd682" title="GUI ( &#45;&#45; ) wait until GUI_thread terminates " alt="" coords="214,512,329,539"/>
+<area shape="rect" id="node14" href="$group__gui.html#gaf3aa0154963563930d57e5ca96711483" title="WINDOW ( name &#45;&#45; window:name ) create window " alt="" coords="196,157,347,184"/>
+<area shape="rect" id="node15" href="$classFenix_1_1FVM.html#aa342679854d6c4095afb8738049c8320" title="ARGV ( &#45;&#45; vectors:args ) get arguments given on command line " alt="" coords="405,56,533,83"/>
+<area shape="rect" id="node4" href="$classFenix_1_1Sym.html#afc42e2a537f657cc2ef04297d35a1dad" title="push to nest[] stack&#45;like " alt="" coords="584,132,701,159"/>
+<area shape="rect" id="node6" href="$classFenix_1_1Sym.html#a34a1f3a194a31b34294dbea0b9fd955b" title="pop from nest[] stack&#45;like " alt="" coords="414,208,525,235"/>
+<area shape="rect" id="node12" href="$classFenix_1_1FVM.html#a408bff5f75ef0a4b34c997f23ed634d1" title="BYE ( &#45;&#45; ) stop system " alt="" coords="411,461,528,488"/>
+</map>
